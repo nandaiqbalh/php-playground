@@ -1,5 +1,5 @@
-<?php 
+<?php
 
-function viesShowToDoList(){
-    
+function viesShowToDoList()
+{
 }
