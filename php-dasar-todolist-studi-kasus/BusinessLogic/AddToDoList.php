@@ -3,6 +3,8 @@
 /**
  * Menambahkan to do ke List
  */
+require_once "../php-playground/php-dasar-todolist-studi-kasus/Model/Todolist.php";
+
 function addToDoList(string $inputToDo)
 {
     global $todoList;

@@ -13,7 +13,3 @@ require_once "../php-playground/php-dasar-todolist-studi-kasus/View/ViewAddToDoL
 require_once "../php-playground/php-dasar-todolist-studi-kasus/View/ViewRemoveToDoList.php";
 
 echo "APP TO DO LIST" . PHP_EOL;
-$todoList[1] = "Belajar PHP";
-$todoList[2] = "Wawancara Momentum";
-
-showToDoList();
