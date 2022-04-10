@@ -14,6 +14,7 @@ function viewAddToDoList()
 
     if ($todo == "x") {
         // batal
+        echo "Batal menambah todo" . PHP_EOL;
     } else {
         addToDoList($todo);
     }
