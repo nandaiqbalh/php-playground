@@ -2,7 +2,11 @@
 
 class Person
 {
-    var $name;
-    var $address;
-    var $country;
+    var string $name;
+
+    // address ini boleh null
+    var ?string $address = null;
+
+    // default value
+    var string $country = "Indonesia";
 }
