@@ -9,4 +9,10 @@ class Person
 
     // default value
     var string $country = "Indonesia";
+
+    // function
+    function sayHello(string $name)
+    {
+        echo "Hello, $name" . PHP_EOL;
+    }
 }
