@@ -7,3 +7,5 @@ $person1->name = "Nanda";
 
 // akses function
 $person1->sayHello("Iqbal");
+
+$person1->info();

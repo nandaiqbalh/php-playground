@@ -2,6 +2,18 @@
 
 class Person
 {
+
+    const AUTHOR = "Nanda Iqbal Hanafi";
+
+    function info()
+    {
+        // pemanggilan secara biasa
+        echo "Author  : " . Person::AUTHOR . " dengan pemanggilan biasa" . PHP_EOL;
+
+        // pemanggilan dengan self keyword
+        echo "Author  : " . self::AUTHOR . " dengan pemanggilan self keyword" . PHP_EOL;
+    }
+
     var string $name;
 
     // address ini boleh null
