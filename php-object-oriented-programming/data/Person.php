@@ -4,6 +4,22 @@ class Person
 {
 
     const AUTHOR = "Nanda Iqbal Hanafi";
+    var string $name;
+    var ?string $address = null; // address ini boleh null
+    var string $country = "Indonesia"; // default value
+
+    // constructor
+    public function __construct(string $name, ?string $address)
+    {
+        $this->name = $name;
+        $this->address = $address;
+    }
+
+    // destructor
+    public function __destruct()
+    {
+        echo "Object person {$this->name} is destroyed" . PHP_EOL;
+    }
 
     function info()
     {
@@ -14,13 +30,7 @@ class Person
         echo "Author  : " . self::AUTHOR . " dengan pemanggilan self keyword" . PHP_EOL;
     }
 
-    var string $name;
 
-    // address ini boleh null
-    var ?string $address = null;
-
-    // default value
-    var string $country = "Indonesia";
 
     // function nullable
     function sayHello(?string $name)
