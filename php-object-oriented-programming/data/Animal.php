@@ -8,6 +8,11 @@ abstract class Animal
     public string $name;
 
     abstract public function run(): void;
+
+    function sayAnimal($name)
+    {
+        echo "This is $name" . PHP_EOL;
+    }
 }
 
 class Cat extends Animal

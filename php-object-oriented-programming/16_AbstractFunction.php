@@ -6,3 +6,5 @@ use Data\{Animal, Cat};
 $cat = new Cat();
 $cat->name = "Nana";
 $cat->run();
+
+$cat->sayAnimal("Cat");
