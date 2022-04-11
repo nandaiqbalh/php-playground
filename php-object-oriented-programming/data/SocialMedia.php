@@ -9,10 +9,10 @@ class SocialMedia
 
 final class Facebook extends SocialMedia
 {
-    // akan error
-    public function login(string $username, string $password): void
-    {
-    }
+    // // akan error
+    // public function login(string $username, string $password): void
+    // {
+    // }
 }
 
 // ini akan error
