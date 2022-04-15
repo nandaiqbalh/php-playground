@@ -9,7 +9,7 @@ class NotBlank
 
 class LoginRequest
 {
-    
+
     // menggunakan attribut not blank di properti
     // artinya, nanti akan ada meta data (informasi tambahan ke properti ini)
     #[NotBlank]
