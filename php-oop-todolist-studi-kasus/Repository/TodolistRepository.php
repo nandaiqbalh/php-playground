@@ -7,13 +7,13 @@ namespace Repository{
   interface TodolistReposiroty{
 
     // add
-    public function save(Todolist $todolist) : void;
+    function save(Todolist $todolist) : void;
 
     // remove
-    public function remove(int $number) : bool;
+    function remove(int $number) : bool;
 
     // show
-    public function findAll() : array;
+    function findAll() : array;
   }
 }
  ?>
