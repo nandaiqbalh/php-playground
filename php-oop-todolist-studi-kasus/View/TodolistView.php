@@ -14,7 +14,8 @@ namespace View{
     }
 
     function removeTodolist() : void{
-      
+
+
     }
 
   }

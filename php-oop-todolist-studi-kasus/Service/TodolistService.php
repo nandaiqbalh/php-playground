@@ -1,7 +1,10 @@
 <?php
 
 namespace Service{
-  interface TodolistReposiroty{
+
+    use Repository\TodolistRepository;
+
+  interface TodolistService{
 
     // show
     function showTodolist(): void;
@@ -11,6 +14,41 @@ namespace Service{
 
     // remove
     function removeTodolist(int $number) : void;
+  }
+
+  class TodolistServiceImpl implements TodolistService{
+
+    private TodolistRepository $todolistRepository;
+
+    // constructor
+    public function __construct(TodolistRepository $todolistRepository)
+    {
+      $this->todolistRepository = $todolistRepository;
+
+    }
+
+    function showTodolist(): void
+    {
+      // judul aplikasi
+      echo "TODO LIST" . PHP_EOL;
+
+      // foreach untuk menampilkan
+      $todoList = $this->todolistRepository->findAll();
+      foreach ($todoList as $number => $value) {
+          echo "$number. $value" . PHP_EOL;
+      }
+    }
+
+
+    // add
+    function addTodolist(string $todo) : void{
+
+    }
+
+    // remove
+    function removeTodolist(int $number) : void{
+
+    }
   }
 }
  ?>
