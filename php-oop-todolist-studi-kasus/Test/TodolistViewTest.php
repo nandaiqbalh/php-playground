@@ -36,7 +36,23 @@ function testViewAddTodoList() : void{
   
   $todolistView->showTodolist();
   $todolistView->addTodolist();
+
+}
+
+function testViewRemoveTodoList() : void{
+
+  $todolistRepository = new TodolistRepositoryImpl();
+  $todolistService = new TodolistServiceImpl($todolistRepository);
+  $todolistView = new TodolistView($todolistService);
+
+  $todolistService->addTodolist("Tahajud");
+  $todolistService->addTodolist("Dhuha");
+  $todolistService->addTodolist("Puasa");
+  
+  $todolistView->showTodolist();
+  $todolistView->removeTodolist();
     
 }
-testViewAddTodoList();
+
+testViewRemoveTodoList();
  ?>

@@ -60,6 +60,22 @@ namespace View{
 
     function removeTodolist() : void{
 
+      $this->todolistService->showTodolist();
+
+      echo "\nMENGHAPUS TODO" . PHP_EOL;
+  
+      $pilihan = InputHelper::input("Number (x untuk batal)");
+  
+      if ($pilihan == "x") {
+          echo "Batal menghapus todo" . PHP_EOL;
+      } else {
+          $success = $this->todolistService->removeTodolist($pilihan);
+          if ($success) {
+              echo "Berhasil menghapus todo nomor $pilihan" . PHP_EOL;
+          } else {
+              echo "Gagal menghapus todo nomor $pilihan" . PHP_EOL;
+          }
+      }
 
     }
 
