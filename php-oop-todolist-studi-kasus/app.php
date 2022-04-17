@@ -1,21 +1,21 @@
 <?php
 
-require_once "../php-playground/php-dasar-todolist-studi-kasus/Model/Todolist.php";
-require_once "../php-playground/php-dasar-todolist-studi-kasus/Model/Todolist.php";
+require_once "../php-playground/php-oop-todolist-studi-kasus/Entity/TodoList.php";
+require_once "../php-playground/php-oop-todolist-studi-kasus/Helper/InputHelper.php";
+require_once "../php-playground/php-oop-todolist-studi-kasus/Repository/TodolistRepository.php";
+require_once "../php-playground/php-oop-todolist-studi-kasus/Service/TodolistService.php";
+require_once "../php-playground/php-oop-todolist-studi-kasus/View/TodolistView.php";
 
-// reuquire business logic
-require_once "../php-playground/php-dasar-todolist-studi-kasus/BusinessLogic/ShowToDoList.php";
-require_once "../php-playground/php-dasar-todolist-studi-kasus/BusinessLogic/AddToDoList.php";
-require_once "../php-playground/php-dasar-todolist-studi-kasus/BusinessLogic/RemoveToDoList.php";
-
-// require view
-require_once "../php-playground/php-dasar-todolist-studi-kasus/View/ViewShowToDoList.php";
-require_once "../php-playground/php-dasar-todolist-studi-kasus/View/ViewAddToDoList.php";
-require_once "../php-playground/php-dasar-todolist-studi-kasus/View/ViewRemoveToDoList.php";
-
-// require helper
-require_once "../php-playground/php-dasar-todolist-studi-kasus/Helper/Input.php";
+use Entity\Todolist;
+use Service\TodolistServiceImpl;
+use Repository\TodolistRepositoryImpl;
+use View\TodolistView;
 
 echo "APP TO DO LIST" . PHP_EOL;
 
-viesShowToDoList();
+$todolistRepository = new TodolistRepositoryImpl();
+$todolistService = new TodolistServiceImpl($todolistRepository);
+$todolistView = new TodolistView($todolistService);
+
+$todolistView->showTodolist();
+
