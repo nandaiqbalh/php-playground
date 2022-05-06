@@ -22,5 +22,4 @@ SQL;
 $connection->exec($sql);
 
 echo "Sukses eksekusi " . PHP_EOL;
-
 $connection = null;
