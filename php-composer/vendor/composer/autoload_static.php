@@ -6,6 +6,20 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit802bd958f6aeda5b831c4ea52b38269d
 {
+    public static $prefixLengthsPsr4 = array (
+        'N' => 
+        array (
+            'NandaIqbalH\\' => 12,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'NandaIqbalH\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -13,6 +27,8 @@ class ComposerStaticInit802bd958f6aeda5b831c4ea52b38269d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit802bd958f6aeda5b831c4ea52b38269d::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit802bd958f6aeda5b831c4ea52b38269d::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit802bd958f6aeda5b831c4ea52b38269d::$classMap;
 
         }, null, ClassLoader::class);

@@ -8,5 +8,10 @@
             "email": "nandaiqbalhanafii@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "NandaIqbalH\\": "src/"
+        }
+    },
     "require": {}
 }
