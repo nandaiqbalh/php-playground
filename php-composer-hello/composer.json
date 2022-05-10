@@ -1,0 +1,17 @@
+{
+    "name": "nandaiqbalh/php-composer-hello",
+    "description": "Belajar membuat library",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Nandaiqbalh\\PhpComposerHello\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nandaiqbalh",
+            "email": "nandaiqbalhanafii@gmail.com"
+        }
+    ],
+    "require": {}
+}
